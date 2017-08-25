@@ -85,8 +85,7 @@
     }
     &__content {
         @include clearfix();
-    }
-    // highlight zone
+    } // highlight zone
     &--highlight {
         @include clearfix;
         margin-bottom: 0;
@@ -225,11 +224,50 @@
     }
 }
 
-
-/* .box-slider */
-
+// .box-slider
 .qc {
     @include clearfix();
     margin-bottom: 15px;
     text-align: center;
+}
+
+.follow {
+    &__facebook {
+        background: #4267b2;
+        &:hover {
+            background: #375694;
+        }
+        .fa {
+            border-right: 1px solid #95aede;
+        }
+    }
+    &__twitter {
+        background: #4099ff;
+        &:hover {
+            background: #347fd6;
+        }
+        .fa {
+            border-right: 1px solid #65adff;
+        }
+    }
+    &__facebook,
+    &__twitter {
+        border-radius: 3px;
+        font-size: 16px;
+        line-height: 35px;
+        transition: all 0.2s linear;
+        a {
+            display: block;
+            color: white;
+        }
+        .fa {
+            font-size: 18px;
+            line-height: 35px;
+            width: 35px;
+            text-align: center;
+            color: white;
+
+            margin-right: 8px;
+        }
+    }
 }
