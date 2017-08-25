@@ -1,0 +1,235 @@
+/* ====================================
+   All region in project
+   ==================================== */
+
+
+/* zone global style */
+
+.zone {
+    margin-bottom: 15px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 1.2em;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        position: relative;
+        border-bottom: 1px solid $brand-success;
+        @include transition(all, 0.2, ease);
+        color: $brand-success;
+        padding-bottom: 5px;
+        font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+        a {
+            color: $brand-success;
+            display: block;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+        &:hover {}
+        .featured-area & {
+            font-size: 14px;
+            a {
+                color: $brand-danger;
+                &:hover {
+                    color: $brand-primary;
+                }
+            }
+        }
+        .cate {
+            &::before {
+                content: '-';
+                display: inline;
+                padding: 0 8px;
+                color: $brand-primary;
+            }
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .sub-cate {
+            font-size: 16px;
+            text-transform: none;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+        .viewmore {
+            float: right;
+            font-weight: normal;
+            position: relative;
+            top: 4px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 11px;
+            color: #777;
+            text-transform: none;
+        }
+        .normal-area .main-col &,
+        .slider-area & {
+            padding-left: 15px;
+            &::before {
+                content: '';
+                display: block;
+                width: 8px;
+                height: 14px;
+                background-color: $brand-primary;
+                position: absolute;
+                top: 5px;
+                left: 0;
+            }
+        }
+    }
+    &__content {
+        @include clearfix();
+    }
+    // highlight zone
+    &--highlight {
+        @include clearfix;
+        margin-bottom: 0;
+        .highlight__slider {
+            position: relative;
+            min-height: 350px;
+        }
+    }
+    &--latest {
+        margin-bottom: 0;
+    }
+    &--contact {
+        .input-group {
+            margin-bottom: 10px;
+        }
+    }
+    /* slider-zone */
+    &.zone-slider,
+    &.album-zone {
+        .zone-content {
+            position: relative;
+        }
+        .bx-viewport {
+            margin-bottom: 10px;
+        }
+        .bx-pager {
+            text-align: center;
+            .bx-pager-item {
+                display: inline-block;
+                margin-left: 5px;
+                margin-right: 5px;
+                height: 35px;
+                a {
+                    display: block;
+                    text-indent: -9999em;
+                    width: 8px;
+                    height: 8px;
+                    margin-top: 13px;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    border-radius: 50%;
+                    background-color: #d8d8d8;
+                    &.active {
+                        background-color: $brand-primary;
+                    }
+                }
+            }
+        }
+        .slider-control {
+            .fa {
+                width: 30px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, .4);
+                min-width: 33px;
+                color: white;
+                top: 38px;
+                @include respond-to-sm-only() {
+                    top: 22px;
+                }
+                @include respond-to-xs() {
+                    top: calc(50% - 25px);
+                }
+                a {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+                &.fa-angle-left {
+                    position: absolute;
+                    left: 0;
+                }
+                &.fa-angle-right {
+                    position: absolute;
+                    right: 0;
+                }
+                &:focus,
+                &:active {
+                    margin-top: 1px;
+                }
+            }
+        }
+    }
+    &--slider {
+        .zone__content {
+            position: relative;
+            .slider-control {
+                .fa {
+                    font-size: 24px;
+                    width: 30px;
+                    height: 50px;
+                    line-height: 50px;
+                    color: white;
+                    top: 60px;
+                    text-align: center;
+                    opacity: .5;
+                    @include transition(opacity, 0.2, ease);
+                    a {
+                        display: block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                    &.fa-angle-left {
+                        position: absolute;
+                        left: 0;
+                    }
+                    &.fa-angle-right {
+                        position: absolute;
+                        right: 0;
+                    }
+                    &:hover {
+                        opacity: .8;
+                    }
+                    &:focus,
+                    &:active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &--grey {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ddd;
+        .zone__content {}
+    }
+}
+
+
+/* .box-slider */
+
+.qc {
+    @include clearfix();
+    margin-bottom: 15px;
+    text-align: center;
+}

@@ -1,0 +1,48 @@
+/* ====================================
+   Customize Pagination
+   ==================================== */
+
+.pagination {
+    margin-top: 0;
+    @include clearfix;
+    display: block;
+    li {
+        display: inline-block;
+        > a {
+            // color: white;
+            padding: 0 7px 7px;
+            border: none;
+            @include transition(all, 0.2, ease-out);
+        }
+        &.active {
+            >a {
+                font-weight: bold;
+                color: $brand-success;
+                background: none;
+                padding-bottom: 5px;
+                border-bottom: 2px solid $brand-success;
+            }
+        }
+    }
+    > li > a,
+    > li > span {
+        &:hover,
+        &:focus {
+            color: $brand-success;
+            background: none;
+            border: none;
+            font-weight: bold;
+        }
+    }
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            color: $brand-success;
+            background: none;
+            border-bottom: 2px solid $brand-success;
+            cursor: default;
+        }
+    }
+}

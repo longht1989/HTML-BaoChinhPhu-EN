@@ -1,0 +1,104 @@
+#site-content {
+    @include clearfix;
+    margin-bottom: 30px;
+}
+
+.site-wrap {
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    @include clearfix();
+}
+
+.main-col {
+    width: 660px;
+    float: left;
+    @include clearfix();
+}
+
+.sidebar-col {
+    width: 300px;
+    float: right;
+    @include clearfix();
+}
+
+
+/* highlight area layout */
+
+.highlight {
+    @include clearfix();
+    &__slider {
+        width: 435px;
+        // float: left;
+    }
+    &__top-story {
+        margin-left: -7px;
+        margin-right: -8px;
+        @include clearfix;
+        .story {
+            width: 33.33%;
+            float: left;
+            padding-left: 7px;
+            padding-right: 8px;
+        }
+    }
+}
+
+.zone {
+    &-wrap {
+        @include clearfix();
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    &__half {
+        width: 340px;
+        float: left;
+    }
+    .has-2-col & {
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+    }
+    &--latest {
+        width: 210px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &__content {}
+    .has-3-col {
+        margin-left: -7px;
+        margin-right: -8px;
+        .story {
+            width: 33.33%;
+            float: left;
+            padding-left: 7px;
+            padding-right: 8px;
+        }
+    }
+    .has-4-col {
+        margin-left: -10px;
+        margin-right: -10px;
+        .story {
+            width: 25%;
+            float: left;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+    &--highlight {
+        position: relative;
+    }
+}
+
+
+/* area */
+
+.area {
+    @include clearfix;
+    &--abf {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 20px;
+    }
+}

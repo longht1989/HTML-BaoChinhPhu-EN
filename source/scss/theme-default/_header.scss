@@ -1,0 +1,147 @@
+/* ====================================   Header's style   ==================================== */
+
+#site-header {
+    @include clearfix();
+    margin-bottom: 20px;
+    z-index: 10;
+    position: relative;
+}
+
+.header {
+    &__tool {
+        position: absolute;
+        top: 25px;
+        right: 0px;
+        text-align: right;
+        time {
+            display: block;
+            margin-bottom: 5px;
+        }
+    }
+    &__links {
+        a {
+            margin-left: 10px;
+        }
+    }
+    &__content {
+        @include clearfix();
+        overflow: hidden;
+        z-index: 4;
+        .logo {
+            @include transition(all, 0.2, ease);
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        .site-wrap {
+            padding: 25px 0;
+            background: url(../img/hdr-bg.png) right top no-repeat;
+            position: relative;
+        }
+    }
+    &__nav {
+        background: $brand-success;
+    }
+}
+
+.navigator {
+    @include clearfix();
+    @include font-size(14, 40);
+    > li {
+        float: left;
+        position: relative;
+        a {
+            display: block;
+            padding: 0 10px;
+            text-transform: uppercase;
+            color: white;
+            @include transition(all, 0.2, ease);
+            &:hover {
+                background-color: darken($brand-success, 5%);
+            }
+        }
+        &:hover {
+            .navigator__child {
+                left: auto;
+            }
+            .navigator__search {
+                right: 0;
+            }
+        }
+    }
+    &__child {
+        position: absolute;
+        top: 100%;
+        left: -999em;
+        background-color: $brand-success;
+        width: 200px;
+        z-index: 2;
+    }
+    &__rss {
+        float: left;
+        background: white;
+        border-radius: 3px;
+        overflow: hidden;
+        height: 30px;
+        margin-top: 5px;
+        margin-right: 5px;
+        a {
+            color: black !important;
+            display: block;
+            font-size: 16px;
+            line-height: 30px;
+            @include transition(all, 0.2, ease);
+        }
+        &:hover {
+            a {
+                background-color: #ddd !important;
+            }
+        }
+    }
+    &__search {
+        float: left;
+        width: 200px;
+        height: 30px;
+        margin-top: 5px;
+        position: relative;
+        background: white;
+        border-radius: 3px;
+        overflow: hidden;
+        input {
+            width: 196px;
+            height: 30px;
+            border: none;
+        }
+        .btn {
+            position: absolute;
+            right: 0;
+            top: 0px;
+            border: none;
+            padding: 0 5px;
+            line-height: 30px;
+            font-size: 16px;
+            &:hover {
+                background: none;
+                color: #555;
+            }
+        }
+    }
+}
+
+
+/* topic */
+
+.topic {
+    #site-header & {
+        background-color: #f0f0f0;
+        border-bottom: 1px solid #ddd;
+        @include font-size(16, 40);
+        &__header {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        &__link {
+            margin-right: 10px;
+        }
+    }
+}
