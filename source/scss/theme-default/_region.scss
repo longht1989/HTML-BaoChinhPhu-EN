@@ -271,3 +271,13 @@
         }
     }
 }
+
+// .social floating
+.social {
+    &-floating{
+        position: fixed;
+        top: 253px;
+        left: 50%;
+        margin-left: -535px;
+    }
+}

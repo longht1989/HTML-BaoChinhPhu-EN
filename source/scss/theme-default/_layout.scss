@@ -1,6 +1,7 @@
 #site-content {
     @include clearfix;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .site-wrap {
@@ -22,14 +23,11 @@
     @include clearfix();
 }
 
-
-/* highlight area layout */
-
+// highlight area layout
 .highlight {
     @include clearfix();
     &__slider {
-        width: 435px;
-        // float: left;
+        width: 435px; // float: left;
     }
     &__top-story {
         margin-left: -7px;
@@ -89,16 +87,41 @@
     &--highlight {
         position: relative;
     }
+    &--featured {
+        .story--featured {
+            width: 435px;
+            float: left;
+        }
+        .story-listing {
+            width: 210px;
+            float: right;
+            >li {
+                &+li {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }
 
-
-/* area */
-
+// area
 .area {
     @include clearfix;
     &--abf {
         padding-bottom: 10px;
         border-bottom: 1px solid #ddd;
         margin-bottom: 20px;
+        .zone {
+            margin-bottom: 25px;
+        }
+        .sidebar-col {
+            .zone__title {
+                margin-bottom: 15px;
+            }
+        }
+        .story--border {
+            padding-top: 8px;
+            margin-top: 8px;
+        }
     }
 }

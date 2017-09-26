@@ -7,7 +7,8 @@
         margin-bottom: 5px;
     }
     &__title {
-        @include font-size(16, 21);
+        font-size: 16px;
+        line-height: 21px;
         font-weight: normal;
         a {
             color: $gray-base;
@@ -50,9 +51,11 @@
         }
     }
     &--horizontal {
+        margin-bottom: 15px;
         .story__thumb {
             float: left;
             margin-right: 10px;
+            margin-bottom: 0;
         }
     }
     &--border {
@@ -113,8 +116,7 @@
             max-height: 42px;
             overflow: hidden;
         }
-    }
-    // story in zone listing
+    } // story in zone listing
     .zone__listing & {
         padding-left: 10px;
         padding-right: 10px;
@@ -163,14 +165,12 @@
             line-height: 1.9rem !important;
             font-weight: normal !important;
         }
-    }
-    // story with bold title
+    } // story with bold title
     &.story-bold {
         .title {
             font-weight: bold;
         }
-    }
-    // story cover
+    } // story cover
     &.story-cover {
         .title {
             @include font-size(16, 22);
@@ -181,8 +181,7 @@
                 @include font-size(20, 28);
             }
         }
-    }
-    // story video
+    } // story video
     &.story-video {
         .thumb {
             position: relative;
@@ -200,8 +199,7 @@
                 text-shadow: 1px 1px 2px #000;
             }
         }
-    }
-    // story with bullet 
+    } // story with bullet 
     &.story-bullet {
         margin-bottom: 8px;
         @include last-child-y;
@@ -221,8 +219,7 @@
         margin-bottom: 10px;
         border-bottom: 1px solid #ddd;
         @include last-child-y();
-    }
-    // ranking zone
+    } // ranking zone
     .story-listing &,
     .ranking-zone & {
         margin-bottom: 10px;
@@ -243,15 +240,13 @@
                 // right: 10px;
             }
         }
-    }
-    // normal zone
+    } // normal zone
     .normal-zone & {
         padding-bottom: 5px;
         border-bottom: 1px solid #ddd;
         margin-bottom: 10px;
         @include last-child-y();
-    }
-    // red title
+    } // red title
     .red-title & {
         margin-bottom: 10px;
         @include respond-to-md() {
@@ -259,6 +254,7 @@
         }
     }
 }
+
 
 
 /* home featured slider */
@@ -325,7 +321,7 @@
     }
     &__pager {
         @include clearfix();
-        > a {
+        >a {
             // float: left;
             display: inline-block;
             margin: 0 3px;
@@ -338,6 +334,7 @@
         }
     }
 }
+
 
 
 /* topic */

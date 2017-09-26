@@ -50,7 +50,7 @@
             padding: 7px 15px;
             @include transition(all, 0.2, ease);
         }
-        &.active > a {
+        &.active>a {
             &,
             &:hover,
             &:focus {
@@ -64,6 +64,7 @@
 }
 
 [class*="icon-"] {
+    display: inline-block;
     width: 32px;
     height: 32px;
     background: url(../img/icon-social.png) no-repeat;
@@ -87,4 +88,8 @@
 
 .icon-twitter {
     background-position: -126px 0px;
+}
+
+.icon-envelope {
+    background-position: -168px 0px;
 }

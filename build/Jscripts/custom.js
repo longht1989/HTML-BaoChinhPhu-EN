@@ -9,7 +9,8 @@ $(function() {
         prevText: '',
         nextSelector: '#highlight-slider-next',
         prevSelector: '#highlight-slider-prev',
-        pagerCustom: '#highlight-pager'
+        pagerCustom: '#highlight-pager',
+        auto: 1
     });
     // featured slider
     $('.zone--slider .slider').bxSlider({

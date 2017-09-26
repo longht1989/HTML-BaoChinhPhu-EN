@@ -57,13 +57,13 @@ gulp.task('scripts', function() {
 // styles task
 gulp.task('styles', function() {
     gulp.src(paths.scss_dev + '/styles.scss')
-        // .pipe(plumber({
-        //     errorHandler: function(err) {
-        //         console.log(err);
-        //         this.emit('end');
-        //     }
-        // }))
-        .pipe(sass().on('error', sass.logError))
+        .pipe(plumber({
+            errorHandler: function(err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        // .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.init())
         .pipe(sass())
         // .pipe(gulp.dest(paths.css)) // make normal css for debug
@@ -105,7 +105,7 @@ gulp.task('serve', ['scripts', 'styles'], function() {
         },
         open: false,
         ghostMode: {
-            scroll: true
+            // scroll: true
         }
     });
     gulp.watch('./source/js/**/*.js', ['copy']);
